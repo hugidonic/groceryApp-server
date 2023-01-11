@@ -1,0 +1,40 @@
+create TABLE IF NOT EXISTS  user_info(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  hashedPassword VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS  user_payment_method(
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+
+  card_number VARCHAR(255) NOT NULL,
+  card_name VARCHAR(255) NOT NULL,
+
+  FOREIGN KEY (user_id) REFERENCES user_info(id)
+);
+
+
+CREATE TABLE IF NOT EXISTS  user_delivery_address(
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+
+	city: VARCHAR(255) NOT NULL,
+	street: VARCHAR(255) NOT NULL,
+	house: VARCHAR(255) NOT NULL,
+	country: VARCHAR(255) NOT NULL,
+
+  FOREIGN KEY (user_id) REFERENCES user_info(id)
+);
+
+
+CREATE TABLE IF NOT EXISTS  user_promo_cards(
+  id SERIAL PRIMARY KEY,
+  user_Id INTEGER NOT NULL,
+
+	begin_date: TIMESTAMP,
+	end_date: TIMESTAMP,
+	price: SMALLINT,
+  FOREIGN KEY (user_id) REFERENCES user_info(id)
+);

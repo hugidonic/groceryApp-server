@@ -1,0 +1,62 @@
+[
+	{
+		"id": "37708",
+		"createdAt": "2022-09-08T16:23:32.222Z",
+		"price": 1234.99,
+		"type": "FINISHED",
+		"deliveryAddress": {
+			"id": "102451",
+			"city": "Kazan",
+			"street": "Sirtlanova",
+			"house": "18",
+			"country": "Russia"
+		},
+		"paymentMethod": {
+			"id": "48913",
+			"last4digits": "2334",
+			"color": "#F7B2BD",
+			"cardName": "MasterCard"
+		},
+		"cartItems": [
+			{
+				"id": "1",
+				"count": 4,
+				"product": {
+					"id": "81886",
+					"name": "Bananas",
+					"type": "fruit",
+					"description": "Organic",
+					"richDescription": "",
+					"price": 4.99,
+					"pictureUri": "http://10.0.2.2:8000/api/images/Bananas.png"
+				}
+			},
+			{
+				"id": "2",
+				"count": 1,
+				"product": {
+					"id": "49104",
+					"name": "Apples",
+					"type": "fruit",
+					"description": "Organic",
+					"richDescription": "",
+					"price": 4.99,
+					"pictureUri": "http://10.0.2.2:8000/api/images/Apples.png"
+				}
+			},
+			{
+				"id": "3",
+				"count": 2,
+				"product": {
+					"id": "150493",
+					"name": "Berries",
+					"type": "fruit",
+					"description": "Organic",
+					"richDescription": "",
+					"price": 4.99,
+					"pictureUri": "http://10.0.2.2:8000/api/images/Berries.png"
+				}
+			}
+		]
+	}
+]
